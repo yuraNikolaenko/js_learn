@@ -1,0 +1,240 @@
+/* Общие стили страницы */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fa;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Основной контейнер */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+/* Верхнее меню */
+.top-menu {
+    background-color: #34495e;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 15px;
+    height: 40px;
+}
+
+.top-menu-left {
+    display: flex;
+    align-items: center;
+}
+
+.menu-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.top-menu-left h1 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.top-menu-right {
+    display: flex;
+    align-items: center;
+    position: relative;
+    font-size: 14px;
+}
+
+/* Панель пользователя */
+.user-menu-btn {
+    cursor: pointer;
+    font-size: 20px;
+    user-select: none;
+    padding: 3px 6px;
+}
+
+.user-menu {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    display: none;
+    flex-direction: column;
+    z-index: 1000;
+}
+
+.user-menu.visible {
+    display: flex;
+}
+
+.user-menu a {
+    padding: 8px 12px;
+    text-decoration: none;
+    color: #333;
+    white-space: nowrap;
+}
+
+.user-menu a:hover {
+    background-color: #f2f2f2;
+}
+
+/* Рабочая область */
+.workspace {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+
+/* Боковая панель */
+.sidebar {
+    width: 200px;
+    background-color: #2c3e50;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.sidebar a:hover {
+    background-color: #34495e;
+}
+
+/* Область контента */
+.content-area {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+/* Панель вкладок */
+.status-bar {
+    background-color: #eaeaea;
+    padding: 5px;
+    border-top: 1px solid #ccc;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    overflow-x: auto;
+}
+
+/* Вкладки */
+.tab {
+    background: linear-gradient(to right, #0d47a1, #1976d2);
+    color: white;
+    padding: 8px 15px;
+    margin: 2px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+}
+
+.tab:hover {
+    background: linear-gradient(to right, #1565c0, #1e88e5);
+}
+
+.active-tab {
+    background: linear-gradient(to right, #0b3559, #1565c0);
+    font-weight: bold;
+    transform: scale(1.1);
+}
+
+.tab-close {
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+/* Кнопки справочников */
+.directory-buttons {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    margin-bottom: 20px;
+}
+
+.directory-btn {
+    padding: 8px 15px;
+    margin-bottom: 8px;
+    font-size: 15px;
+    color: #fff;
+    background-color: #0d47a1;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.directory-btn:hover {
+    background-color: #1565c0;
+}
+
+/* Стили для таблиц */
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.styled-table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #0d47a1;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #e3f2fd;
+}
+
+/* Дашборд */
+.dashboard-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.dashboard-card {
+    background-color: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.dashboard-card h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #0d47a1;
+}
+
+.dashboard-card p {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 10px;
+}
