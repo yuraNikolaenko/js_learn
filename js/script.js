@@ -133,3 +133,5 @@ document.addEventListener('DOMContentLoaded', () => {
     renderTopMenu('Николаенко Юрий');
     renderDashboard();
 });
+
+console.log("Тестовое изменение для проверки Git");
