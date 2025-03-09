@@ -135,3 +135,5 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 console.log("Тестовое изменение для проверки Git");
+console.log("Тестовое изменение для проверки Git 2 ");
+
