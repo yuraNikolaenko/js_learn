@@ -134,6 +134,3 @@ document.addEventListener('DOMContentLoaded', () => {
     renderDashboard();
 });
 
-console.log("Тестовое изменение для проверки Git");
-console.log("Тестовое изменение для проверки Git 2 ");
-
